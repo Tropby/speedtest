@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     QtCharts::QValueAxis * axisY = new QtCharts::QValueAxis();
     axisY->setMin(0);
     axisY->setMax(1000000000);
-    axisY->setTitleText("Mbit/s");
+    axisY->setTitleText("Download Mbit/s");
     chart.addAxis(axisY, Qt::AlignLeft);
 
     QtCharts::QValueAxis * axisX = new QtCharts::QValueAxis();
@@ -55,19 +55,19 @@ MainWindow::MainWindow(QWidget *parent)
     QtCharts::QValueAxis * raxisY = new QtCharts::QValueAxis();
     raxisY->setMin(0);
     raxisY->setMax(1000);
-    raxisY->setTitleText("Mbit/s");
+    raxisY->setTitleText("Download Mbit/s");
     resultChart.addAxis(raxisY, Qt::AlignLeft);
 
     QtCharts::QValueAxis * raxisY2 = new QtCharts::QValueAxis();
     raxisY2->setMin(0);
     raxisY2->setMax(1000);
-    raxisY->setTitleText("Mbit/s");
+    raxisY2->setTitleText("Upload Mbit/s");
     resultChart.addAxis(raxisY2, Qt::AlignRight);
 
     QtCharts::QDateTimeAxis * raxisX = new QtCharts::QDateTimeAxis();
     raxisX->setMin(QDateTime::currentDateTime());
     raxisX->setMax(QDateTime::currentDateTime().addSecs(10));
-    raxisY->setTitleText("Date/Time");
+    raxisX->setTitleText("Date/Time");
     resultChart.addAxis(raxisX, Qt::AlignBottom);
 
     resultLineSeries.attachAxis(raxisX);

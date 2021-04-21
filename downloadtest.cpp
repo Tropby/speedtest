@@ -23,7 +23,7 @@ void DownloadTest::start()
     }
     else
     {
-        qFatal("Can not connect!");
+        emit finished(-1);
     }
 }
 

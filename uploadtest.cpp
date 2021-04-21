@@ -16,7 +16,7 @@ void UploadTest::sendData( int64_t size )
     socket.connectToHost("speedtest.tele2.net", 80);
     if(!socket.waitForConnected())
     {
-        qDebug() << "Can not connect to host!";
+        emit finished(-1);
         return;
     }
 
